@@ -1,0 +1,43 @@
+@HotelListing.Api_HostAddress = https://localhost:7167
+
+
+GET {{HotelListing.Api_HostAddress}}/api/hotels
+
+###
+
+POST {{HotelListing.Api_HostAddress}}/api/hotels
+Content-Type: application/json
+
+{
+  
+  "id": 5,
+  "name": "Dracula's Castle",
+  "address": "666 Dark Rd",
+  "rating": 4.5
+
+}
+
+###
+
+@id=5
+DELETE {{HotelListing.Api_HostAddress}}/api/hotels/{{id}}
+
+###
+
+GET {{HotelListing.Api_HostAddress}}/api/hotels/{{id}}
+
+###
+
+PUT {{HotelListing.Api_HostAddress}}/api/hotels/{{id}}
+Content-Type: application/json
+
+{
+  
+  "id": 5,
+  "name": "Dracula's Castle",
+  "address": "666 Dark Rd",
+  "rating": 4.5
+
+}
+
+###
